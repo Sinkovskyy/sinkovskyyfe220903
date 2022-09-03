@@ -1,6 +1,5 @@
 import './styles.css';
 import { Text } from '../../../Text';
-import { Title } from '../../../Title';
 
 type TLine = {
   title: string;
