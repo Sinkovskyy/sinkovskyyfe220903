@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.main__line {
+    width: 200px;
+    height: 20px;
+    background-color: var(--grey);
+}
+
+.info__line {
+    background-color: var(--blue);
+    width: 10px;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+span.time__text{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

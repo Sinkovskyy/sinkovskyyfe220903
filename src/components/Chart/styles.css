@@ -1,0 +1,9 @@
+div.list {
+    margin-top: 10px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    flex-direction: column;
+    width: auto;
+}
