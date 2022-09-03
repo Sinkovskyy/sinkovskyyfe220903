@@ -2,18 +2,17 @@
     display: flex;
     gap: 20px;
     flex-direction: row;
-    max-width: 100%;
-    flex-wrap: wrap;
     gap:10px;
     height: auto;
     justify-content: center;    
+
 }
 
 .main__line {
-    max-width:100%;
     width:300px;
-    min-height: 20px;
     background-color: var(--grey);
+    min-height: 20px;
+
 }
 
 .info__line {
@@ -29,4 +28,14 @@ span.time__text{
     left:50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    font-size: 16px;
+}
+
+
+@media (max-width:450px) {
+    .container {
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
 }
