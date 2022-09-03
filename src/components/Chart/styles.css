@@ -6,4 +6,6 @@ div.list {
     gap: 10px;
     flex-direction: column;
     width: auto;
+    max-width: 90%;
+
 }
