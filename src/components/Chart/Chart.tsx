@@ -1,15 +1,32 @@
 import './styles.css';
+import { useState } from 'react';
+
 import { Title } from '../Title';
-import { Line } from './components';
-import { TGetPositionInPercentage, TData } from './types';
+import { GenerateDataButton, Line } from './components';
+import { TGetPositionInPercentage, TLine } from './types';
+
+export const Lines = {
+  landingPage: {
+    name: 'Landing Page',
+  },
+  configurator: {
+    name: 'Configurator',
+  },
+  checkOut: {
+    name: 'Check-out',
+  },
+  deal: {
+    name: 'Deal',
+  },
+};
 
 export const Chart = () => {
-  const data: TData = [
-    { name: 'Landing Page', time: 7.4 },
-    { name: 'Configurator', time: 0.2 },
-    { name: 'Check-out', time: 7.0 },
-    { name: 'Deal', time: 3.8 },
-  ];
+  const [data, setData] = useState<TLine[]>([
+    { name: Lines.landingPage.name, time: 7.4 },
+    { name: Lines.configurator.name, time: 0.2 },
+    { name: Lines.checkOut.name, time: 7.0 },
+    { name: Lines.deal.name, time: 3.8 },
+  ]);
 
   const Utils = {
     totalTime: (): number => {
@@ -29,7 +46,7 @@ export const Chart = () => {
   };
 
   return (
-    <>
+    <div className="list">
       <Title>SPENT TIME (SECONDS)</Title>
       <div className="list">
         {data.map((data, index) => (
@@ -42,6 +59,7 @@ export const Chart = () => {
           />
         ))}
       </div>
-    </>
+      <GenerateDataButton setData={setData} />
+    </div>
   );
 };

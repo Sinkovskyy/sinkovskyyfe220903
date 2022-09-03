@@ -1,6 +1,4 @@
-export type TData = TChartValue[];
-
-export type TChartValue = {
+export type TLine = {
   name: string;
   time: number;
 };
